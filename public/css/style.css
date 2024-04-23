@@ -1,0 +1,76 @@
+.navbar-nav .nav-link {
+    font-size: 26px; /* Tamaño de letra cambiado */
+}
+
+.img {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #000000;
+    margin-top: 10px;
+    width: 600px;
+}
+
+.rayo {
+    width: 0;
+    height: 2px;
+    background-color: red;
+    /* Color del rayo láser */
+    position: absolute;
+    top: 33%;
+    /* Ajusta la posición verticalmente según sea necesario */
+    animation: disparo-rayo 1s linear;
+    /* Define la animación */
+}
+
+@keyframes disparo-rayo {
+    from {
+        width: 0;
+        /* Ancho inicial */
+        left: 85%;
+        /* Comienza desde la derecha */
+    }
+
+    to {
+        width: 20%;
+        /* Ancho final */
+        left: 0;
+        /* Termina en el lado izquierdo */
+    }
+}
+
+
+.imagen-oculta {
+    opacity: 0; /* Inicialmente oculta */
+    animation: mostrar-delay 0.9s 0.9s ease forwards; /* Retrasa la animación durante 1 segundo */
+}
+
+@keyframes mostrar {
+    0% {
+        opacity: 0; /* La imagen está oculta al principio */
+    }
+    100% {
+        opacity: 1; /* La imagen se vuelve completamente visible al final */
+    }
+}
+
+/* Aplica la animación después de 1 segundo */
+@keyframes mostrar-delay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.contido {
+    display: none;
+    padding: 6px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.enunciado {
+    display: none;
+}
